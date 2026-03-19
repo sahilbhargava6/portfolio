@@ -9,6 +9,27 @@ document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseent
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
 
+/* MOBILE MENU */
+(function(){
+  const toggle=document.getElementById('menuToggle');
+  const menu=document.getElementById('navMenu');
+  if(!toggle||!menu)return;
+
+  const closeMenu=()=>{
+    document.body.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded','false');
+  };
+
+  toggle.addEventListener('click',()=>{
+    const willOpen=!document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open',willOpen);
+    toggle.setAttribute('aria-expanded',String(willOpen));
+  });
+
+  menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+  window.addEventListener('resize',()=>{if(window.innerWidth>900)closeMenu();});
+})();
+
 /* PARTICLES */
 (function(){
   const cv=document.getElementById('particleCanvas'),ctx=cv.getContext('2d');
