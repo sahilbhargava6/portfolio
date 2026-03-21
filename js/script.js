@@ -71,6 +71,22 @@ window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
   setTimeout(tick,1400);
 })();
 
+/* HERO PANEL TECH ROTATOR */
+(function(){
+  const tag=document.getElementById('heroTechRotator');
+  if(!tag)return;
+  const tech=['Laravel','PHP','MySQL','JavaScript','PostgreSQL','REST APIs'];
+  let idx=0;
+  setInterval(()=>{
+    tag.classList.add('switching');
+    setTimeout(()=>{
+      idx=(idx+1)%tech.length;
+      tag.textContent=tech[idx];
+      tag.classList.remove('switching');
+    },220);
+  },2200);
+})();
+
 /* TERMINAL */
 (function(){
   const lines=[
