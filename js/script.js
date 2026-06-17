@@ -33,8 +33,17 @@ window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
 /* PARTICLES */
 (function(){
   const cv=document.getElementById('particleCanvas'),ctx=cv.getContext('2d');
+  const hero=document.getElementById('hero');
   let W,H;const pts=[];
-  function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+  function resize(){
+    if(hero){
+      W=cv.width=hero.offsetWidth;
+      H=cv.height=hero.offsetHeight;
+    }else{
+      W=cv.width=innerWidth;
+      H=cv.height=innerHeight;
+    }
+  }
   resize();window.addEventListener('resize',resize);
   for(let i=0;i<80;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.5+.5});
   let mouseX=W/2,mouseY=H/2;
@@ -59,7 +68,7 @@ window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
 
 /* TYPING */
 (function(){
-  const roles=['Laravel & PHP web apps.','full stack websites.','clean, fast backends.','pixel-perfect frontends.','production-ready code.'];
+  const roles=['Next.js web apps.','React Native mobile apps.','Laravel & PHP backends.','creative UI/UX designs.','Android & iOS applications.','production-ready code.'];
   let ri=0,ci=0,del=false;
   const el=document.getElementById('typed-text');
   function tick(){
@@ -75,7 +84,7 @@ window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
 (function(){
   const tag=document.getElementById('heroTechRotator');
   if(!tag)return;
-  const tech=['Laravel','PHP','MySQL','JavaScript','PostgreSQL','REST APIs'];
+  const tech=['Next.js','Laravel','React Native','iOS & Android','UI/UX Design','PHP','PostgreSQL','REST APIs'];
   let idx=0;
   setInterval(()=>{
     tag.classList.add('switching');
@@ -90,18 +99,20 @@ window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
 /* TERMINAL */
 (function(){
   const lines=[
-    {t:'<span class="c-comment"># Sahil Bhargava — Full Stack Developer</span>'},
-    {t:'<span class="c-green">$</span> <span class="c-white">php artisan about</span>'},
-    {t:'<span class="c-yellow">→</span> Laravel / PHP Full Stack Developer'},
-    {t:'<span class="c-green">$</span> <span class="c-white">cat stack.json</span>'},
+    {t:'<span class="c-comment"># Sahil Bhargava — Full Stack & Mobile Engineer</span>'},
+    {t:'<span class="c-green">$</span> <span class="c-white">npx stack-info</span>'},
+    {t:'<span class="c-yellow">→</span> Web, Mobile & UI/UX Developer'},
+    {t:'<span class="c-green">$</span> <span class="c-white">cat skills.json</span>'},
     {t:'<span class="c-blue">{</span>'},
-    {t:'&nbsp;&nbsp;<span class="c-yellow">"backend"</span>: <span class="c-green">"Laravel, PHP, Python"</span>,'},
-    {t:'&nbsp;&nbsp;<span class="c-yellow">"frontend"</span>: <span class="c-green">"HTML, CSS, JavaScript"</span>,'},
-    {t:'&nbsp;&nbsp;<span class="c-yellow">"databases"</span>: <span class="c-green">"MySQL, PostgreSQL, Oracle"</span>,'},
-    {t:'&nbsp;&nbsp;<span class="c-yellow">"tools"</span>: <span class="c-green">"phpMyAdmin, Git, cPanel"</span>'},
+    {t:'&nbsp;&nbsp;<span class="c-yellow">"frontend"</span>: <span class="c-green">"Next.js, React, Tailwind"</span>,'},
+    {t:'&nbsp;&nbsp;<span class="c-yellow">"mobile"</span>: <span class="c-green">"React Native, Android, iOS"</span>,'},
+    {t:'&nbsp;&nbsp;<span class="c-yellow">"backend"</span>: <span class="c-green">"Laravel, PHP, Node.js"</span>,'},
+    {t:'&nbsp;&nbsp;<span class="c-yellow">"design"</span>: <span class="c-green">"UI/UX Design, Figma"</span>,'},
+    {t:'&nbsp;&nbsp;<span class="c-yellow">"databases"</span>: <span class="c-green">"MySQL, PostgreSQL, Oracle"</span>'},
     {t:'<span class="c-blue">}</span>'},
     {t:'<span class="c-green">$</span> <span class="c-white">ls live-projects/</span>'},
-    {t:'<span class="c-orange">mnddesigns.in</span> &nbsp;<span class="c-orange">miraiglobalpolymers.com</span> &nbsp;<span class="c-orange">theaugrandair.in</span> &nbsp;<span class="c-orange">klothix.com</span>'},
+    {t:'<span class="c-orange">mnddesigns.in</span> &nbsp;<span class="c-orange">miraiglobalpolymers.com</span> &nbsp;<span class="c-orange">theaugrandair.in</span>'},
+    {t:'<span class="c-orange">klothix.com</span> &nbsp;<span class="c-orange">travelsamurais.com</span> &nbsp;<span class="c-orange">thecareergadget.com</span> &nbsp;<span class="c-orange">healingourth.com</span>'},
     {t:'<span class="c-green">$</span> <span class="c-white">echo $STATUS</span>'},
     {t:'<span class="c-green">✓ Available for new projects</span> <span style="display:inline-block;width:8px;height:12px;background:var(--red);vertical-align:middle;animation:blink .7s infinite"></span>'},
   ];
@@ -133,10 +144,23 @@ document.querySelectorAll('.skill-item').forEach(el=>arcObs.observe(el));
 /* PROJECT SLIDER */
 (function(){
   const track=document.getElementById('projTrack'),cards=track.querySelectorAll('.proj-card'),counter=document.getElementById('projCounter');
-  let cur=0;const W=440+24;
-  function go(n){cur=Math.max(0,Math.min(n,cards.length-1));track.style.transform=`translateX(-${cur*W}px)`;counter.textContent=`${String(cur+1).padStart(2,'0')} / ${String(cards.length).padStart(2,'0')}`}
+  let cur=0;
+  function getStepWidth(){
+    if(cards.length===0)return 0;
+    const cardWidth=cards[0].getBoundingClientRect().width;
+    const style=window.getComputedStyle(track);
+    const gap=parseFloat(style.columnGap||style.gap)||24;
+    return cardWidth+gap;
+  }
+  function go(n){
+    cur=Math.max(0,Math.min(n,cards.length-1));
+    const step=getStepWidth();
+    track.style.transform=`translateX(-${cur*step}px)`;
+    counter.textContent=`${String(cur+1).padStart(2,'0')} / ${String(cards.length).padStart(2,'0')}`;
+  }
   document.getElementById('prevBtn').addEventListener('click',()=>go(cur-1));
   document.getElementById('nextBtn').addEventListener('click',()=>go(cur+1));
+  window.addEventListener('resize',()=>go(cur));
 })();
 
 /* 3D TILT */
