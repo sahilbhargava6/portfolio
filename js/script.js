@@ -112,7 +112,7 @@ window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>60));
     {t:'<span class="c-blue">}</span>'},
     {t:'<span class="c-green">$</span> <span class="c-white">ls live-projects/</span>'},
     {t:'<span class="c-orange">mnddesigns.in</span> &nbsp;<span class="c-orange">miraiglobalpolymers.com</span> &nbsp;<span class="c-orange">theaugrandair.in</span>'},
-    {t:'<span class="c-orange">klothix.com</span> &nbsp;<span class="c-orange">travelsamurais.com</span> &nbsp;<span class="c-orange">thecareergadget.com</span> &nbsp;<span class="c-orange">healingourth.com</span>'},
+    {t:'<span class="c-orange">klothix.com</span> &nbsp;<span class="c-orange">travelsamurais.com</span> &nbsp;<span class="c-orange">thecareergadget.com</span> &nbsp;<span class="c-orange">healingourth.com</span> &nbsp;<span class="c-orange">holistica.org.in</span>'},
     {t:'<span class="c-green">$</span> <span class="c-white">echo $STATUS</span>'},
     {t:'<span class="c-green">✓ Available for new projects</span> <span style="display:inline-block;width:8px;height:12px;background:var(--red);vertical-align:middle;animation:blink .7s infinite"></span>'},
   ];
