@@ -286,6 +286,36 @@
     });
   })();
 
+  /* CONTACT OPTIONS — open a dialog instead of relying on mailto: alone,
+     which silently does nothing when no desktop mail app is configured. */
+  (() => {
+    const dlg = $('#contactDialog');
+    if (!dlg || typeof dlg.showModal !== 'function') return; // old browsers keep the plain mailto link
+    const status = $('.cd-status', dlg);
+    $$('[data-contact]').forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      status.textContent = '';
+      dlg.showModal();
+    }));
+    $('[data-close]', dlg).addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); }); // click on backdrop
+    const copyBtn = $('[data-copy]', dlg), label = $('[data-copy-label]', copyBtn);
+    copyBtn.addEventListener('click', async () => {
+      const text = copyBtn.dataset.copy;
+      let ok = false;
+      try { await navigator.clipboard.writeText(text); ok = true; } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0';
+        dlg.appendChild(ta); ta.select();
+        try { ok = document.execCommand('copy'); } catch { ok = false; }
+        ta.remove();
+      }
+      label.textContent = ok ? 'Copied ✓' : 'Copy email address';
+      status.textContent = ok ? 'Email address copied — paste it into any mail app.' : `Couldn't copy automatically — the address is ${text}`;
+      setTimeout(() => { label.textContent = 'Copy email address'; }, 2500);
+    });
+  })();
+
   /* MAGNETIC BUTTON */
   (() => {
     const btn = $('#magBtn');

@@ -252,6 +252,28 @@ body.menu-open .menu-toggle span:nth-child(3){transform:translateY(-6px) rotate(
 .btn-whatsapp svg{width:18px;height:18px;fill:#4ade80;transition:fill .3s}
 .btn-whatsapp:hover{background:#1f9d55;border-color:#1f9d55}
 .btn-whatsapp:hover svg{fill:var(--white)}
+
+/* CONTACT OPTIONS DIALOG */
+.contact-dialog{margin:auto;padding:0;width:min(440px,calc(100vw - 32px));border:1px solid var(--border);border-radius:var(--radius);background:var(--bg2);color:var(--ash);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.contact-dialog::backdrop{background:rgba(10,9,8,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.contact-dialog[open]{animation:fadeUp .35s ease}
+.cd-inner{position:relative;padding:34px 30px 26px}
+.cd-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--ash);font-size:20px;line-height:1;transition:border-color .3s,color .3s}
+.cd-close:hover{border-color:var(--ash2);color:var(--white)}
+.cd-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.cd-title{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:44px;line-height:1;color:var(--white)}
+.cd-text{font-size:12px;line-height:1.8;color:var(--ash2);margin:10px 0 22px}
+.cd-email{color:var(--white);overflow-wrap:anywhere}
+.cd-actions{display:flex;flex-direction:column;gap:10px}
+.cd-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:15px 18px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02);color:var(--ash);font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;text-align:left;transition:background .3s,border-color .3s,color .3s}
+.cd-btn:hover{border-color:rgba(236,125,116,.45);background:rgba(122,32,32,.15);color:var(--white)}
+.cd-btn--primary{background:var(--red);border-color:var(--red);color:var(--white)}
+.cd-btn--primary:hover{background:#8f2727;border-color:#8f2727}
+.cd-btn--wa:hover{background:#1f9d55;border-color:#1f9d55}
+.cd-status{min-height:18px;margin-top:12px;font-size:11px;color:#4ade80;text-align:center}
+/* the custom cursor sits below the dialog's top layer, so use the system cursor inside it */
+html.has-cursor .contact-dialog,html.has-cursor .contact-dialog *{cursor:auto!important}
+html.has-cursor .contact-dialog :is(a,button){cursor:pointer!important}
 .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:16px 36px;list-style:none;margin-top:52px;position:relative;z-index:2}
 .socials a{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ash2);text-decoration:none;transition:color .3s}
 .socials a:hover{color:var(--white)}
