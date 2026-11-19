@@ -3,57 +3,84 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Sahil Bhargava — Full Stack & Mobile App Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Mono:wght@300;400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<title>Sahil Bhargava — Full Stack &amp; Mobile App Developer</title>
+<meta name="description" content="Sahil Bhargava is a full-stack and mobile developer building fast, production-ready websites and apps with Next.js, Laravel, PHP and React Native. 10+ live client projects across hospitality, e-commerce, B2B and services."/>
+<meta name="author" content="Sahil Bhargava"/>
+<meta name="theme-color" content="#0a0908"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Sahil Bhargava — Full Stack &amp; Mobile App Developer"/>
+<meta property="og:description" content="Next.js, Laravel and React Native developer with 10+ live production websites. Available for new projects."/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css?v=2.0"/>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sahil Bhargava",
+  "jobTitle": "Full Stack & Mobile App Developer",
+  "email": "mailto:sahilbhargava6@gmail.com",
+  "sameAs": ["https://github.com/sahilbhargava6", "https://www.linkedin.com/in/sahilbhargava6/"],
+  "knowsAbout": ["Next.js", "React", "Laravel", "PHP", "React Native", "Android", "iOS", "UI/UX Design", "MySQL", "PostgreSQL", "REST APIs"]
+}
+</script>
 </head>
 <body>
 
-<div id="cur-dot"></div>
-<div id="cur-ring"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="cur-dot" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
 
 <!-- NAV -->
-<nav id="nav">
-  <a href="#hero" class="logo">SahilBhargava<span>.</span>dev</a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-menu" id="navMenu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Stack</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<header>
+  <nav id="nav" aria-label="Primary">
+    <a href="#hero" class="logo" aria-label="Sahil Bhargava — back to top">SahilBhargava<span>.</span>dev</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#testimonials">Clients</a></li>
+      <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
 
 <!-- HERO -->
 <section id="hero">
-  <canvas id="particleCanvas"></canvas>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
   <div class="hero-shell">
     <div class="hero-content">
       <div class="hero-badge"><span class="badge-dot"></span>Available for new projects — 2026</div>
-      <span class="hero-name glitch" data-text="SAHIL BHARGAVA">SAHIL BHARGAVA</span>
-      <p class="hero-sub">I craft &nbsp;<span id="typed-text"></span><span class="typed-cursor"></span></p>
+      <h1 class="hero-name glitch" data-text="SAHIL BHARGAVA" aria-label="Sahil Bhargava">SAHIL BHARGAVA</h1>
+      <p class="hero-sub"><span class="sr-only">I craft production-ready web and mobile apps with Next.js, Laravel and React Native.</span><span aria-hidden="true">I craft &nbsp;<span id="typed-text">production-ready web &amp; mobile apps.</span><span class="typed-cursor"></span></span></p>
       <div class="hero-bottom">
         <div class="hero-cta-group">
           <a href="#projects" class="btn-primary"><span>View Live Projects</span></a>
           <a href="#contact" class="btn-outline">Hire Me</a>
         </div>
-        <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+        <div class="hero-scroll" aria-hidden="true"><div class="scroll-line"></div>Scroll</div>
       </div>
     </div>
 
     <aside class="hero-side reveal-right delay-3" aria-label="Quick snapshot">
       <div class="hero-side-card hero-side-main">
         <div class="hero-side-kicker">Current Focus</div>
-        <h3>Building premium websites &amp; mobile apps.</h3>
+        <h2 class="hero-side-title">Building premium websites &amp; mobile apps.</h2>
         <p>Full-stack web &amp; mobile delivery, from Figma UI/UX designs to live app store deployment.</p>
-        <div class="hero-side-live" aria-live="polite">
+        <div class="hero-side-live">
           <span class="hero-live-dot" aria-hidden="true"></span>
           <span class="hero-live-text">Live stack:</span>
-          <span class="hero-tech-rotator" id="heroTechRotator">Laravel</span>
+          <span class="hero-tech-rotator" id="heroTechRotator">Next.js</span>
         </div>
         <div class="hero-side-bars" aria-hidden="true">
           <div class="hero-side-bar"><span>UI</span><i style="--w:92%"></i></div>
@@ -64,12 +91,12 @@
 
       <div class="hero-side-grid">
         <div class="hero-side-card">
-          <div class="hero-side-stat">08+</div>
+          <div class="hero-side-stat"><span data-live-count>10</span>+</div>
           <div class="hero-side-label">Live Projects</div>
         </div>
         <div class="hero-side-card">
-          <div class="hero-side-stat">10+</div>
-          <div class="hero-side-label">Core Technologies</div>
+          <div class="hero-side-stat">15+</div>
+          <div class="hero-side-label">Technologies</div>
         </div>
       </div>
     </aside>
@@ -77,20 +104,20 @@
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-wrap">
+<div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-track">
-    <div class="marquee-item">Laravel</div><div class="marquee-item">PHP</div>
-    <div class="marquee-item">Next.js</div><div class="marquee-item">React Native</div>
-    <div class="marquee-item">iOS & Android</div><div class="marquee-item">UI/UX Design</div>
-    <div class="marquee-item">JavaScript</div><div class="marquee-item">HTML & CSS</div>
+    <div class="marquee-item">Next.js</div><div class="marquee-item">Laravel</div>
+    <div class="marquee-item">PHP</div><div class="marquee-item">React Native</div>
+    <div class="marquee-item">iOS &amp; Android</div><div class="marquee-item">UI/UX Design</div>
+    <div class="marquee-item">Tailwind</div><div class="marquee-item">JavaScript</div>
     <div class="marquee-item">MySQL</div><div class="marquee-item">PostgreSQL</div>
-    <div class="marquee-item">REST APIs</div><div class="marquee-item">MVC</div>
-    <div class="marquee-item">Laravel</div><div class="marquee-item">PHP</div>
-    <div class="marquee-item">Next.js</div><div class="marquee-item">React Native</div>
-    <div class="marquee-item">iOS & Android</div><div class="marquee-item">UI/UX Design</div>
-    <div class="marquee-item">JavaScript</div><div class="marquee-item">HTML & CSS</div>
+    <div class="marquee-item">REST APIs</div><div class="marquee-item">Vercel</div>
+    <div class="marquee-item">Next.js</div><div class="marquee-item">Laravel</div>
+    <div class="marquee-item">PHP</div><div class="marquee-item">React Native</div>
+    <div class="marquee-item">iOS &amp; Android</div><div class="marquee-item">UI/UX Design</div>
+    <div class="marquee-item">Tailwind</div><div class="marquee-item">JavaScript</div>
     <div class="marquee-item">MySQL</div><div class="marquee-item">PostgreSQL</div>
-    <div class="marquee-item">REST APIs</div><div class="marquee-item">MVC</div>
+    <div class="marquee-item">REST APIs</div><div class="marquee-item">Vercel</div>
   </div>
 </div>
 
@@ -101,27 +128,27 @@
       <div class="sec-label reveal">About Me</div>
       <h2 class="sec-title reveal delay-1">WHO<br>AM <em>I</em></h2>
       <div class="about-text-block">
-        <p class="reveal delay-2">I'm <strong>Sahil Bhargava</strong>, a full stack developer and mobile engineer specialising in <strong>Next.js, Laravel, React Native</strong> & app development — building robust, cross-platform experiences from design to deploy.</p>
-        <p class="reveal delay-3">From crafting pixel-perfect interfaces in <strong>Next.js & Figma</strong> to engineering high-performance mobile apps for <strong>Android & iOS</strong>, and scaling backends with <strong>Laravel, Node.js & databases (MySQL/Postgres)</strong> — I own the entire stack.</p>
-        <p class="reveal delay-4">I've shipped real, live production websites that are <strong>live today</strong>. I bring discipline, clean code and a product-first mindset to every project I take on.</p>
+        <p class="reveal delay-2">I'm <strong>Sahil Bhargava</strong>, a full-stack and mobile developer specialising in <strong>Next.js, Laravel and React Native</strong> — building robust, cross-platform products from first design to final deploy.</p>
+        <p class="reveal delay-3">From pixel-perfect interfaces in <strong>Figma &amp; Next.js</strong>, to high-performance <strong>Android &amp; iOS</strong> apps, to backends scaled on <strong>Laravel, Node.js, MySQL &amp; PostgreSQL</strong> — I own the entire stack.</p>
+        <p class="reveal delay-4">I've shipped production websites for clients in <strong>hospitality, manufacturing, e-commerce, education and professional services</strong> — all live today. I bring discipline, clean code and a product-first mindset to every project.</p>
       </div>
       <div class="stats-row reveal delay-5">
         <div class="stat-box">
-          <div class="stat-n" data-target="8">0</div>
+          <div class="stat-n" data-target="10" data-live-count-target>10+</div>
           <div class="stat-l">Live Projects</div>
         </div>
         <div class="stat-box">
-          <div class="stat-n" data-target="15">0</div>
+          <div class="stat-n" data-target="15">15+</div>
           <div class="stat-l">Technologies</div>
         </div>
         <div class="stat-box">
-          <div class="stat-n" data-target="100">0</div>
-          <div class="stat-l">% Committed</div>
+          <div class="stat-n" data-target="10">10+</div>
+          <div class="stat-l">Industries Served</div>
         </div>
       </div>
     </div>
     <div class="reveal-right delay-2">
-      <div class="terminal">
+      <div class="terminal" aria-hidden="true">
         <div class="term-bar">
           <div class="term-dot"></div><div class="term-dot"></div><div class="term-dot"></div>
           <span class="term-title">sahil@dev:~</span>
@@ -139,228 +166,265 @@
   <div class="skills-grid reveal delay-2">
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="90"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="90"/></svg></div>
       <span class="skill-num">01 / Modern Frontend</span>
-      <div class="skill-name">Next.js & React</div>
-      <div style="font-size:11px;color:var(--ash2)">React frameworks, Server Components, SSR, state management, SPA/MPA, responsive layout.</div>
+      <h3 class="skill-name">Next.js &amp; React</h3>
+      <p class="skill-desc">React frameworks, Server Components, SSR, state management, SPA/MPA, responsive layout.</p>
       <div class="skill-tags"><span class="stag">Next.js</span><span class="stag">React</span><span class="stag">SSR</span><span class="stag">Tailwind</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="95"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="95"/></svg></div>
       <span class="skill-num">02 / Backend</span>
-      <div class="skill-name">Laravel & PHP</div>
-      <div style="font-size:11px;color:var(--ash2)">MVC architecture, Eloquent ORM, Blade templates, REST APIs, middleware, secure auth.</div>
+      <h3 class="skill-name">Laravel &amp; PHP</h3>
+      <p class="skill-desc">MVC architecture, Eloquent ORM, Blade templates, REST APIs, middleware, secure auth.</p>
       <div class="skill-tags"><span class="stag">Laravel</span><span class="stag">PHP</span><span class="stag">MVC</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="85"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="85"/></svg></div>
       <span class="skill-num">03 / Mobile Dev</span>
-      <div class="skill-name">React Native</div>
-      <div style="font-size:11px;color:var(--ash2)">Cross-platform mobile apps, native bridges, state/navigation management, performance.</div>
+      <h3 class="skill-name">React Native</h3>
+      <p class="skill-desc">Cross-platform mobile apps, native bridges, state/navigation management, performance.</p>
       <div class="skill-tags"><span class="stag">React Native</span><span class="stag">JavaScript</span><span class="stag">Apps</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="80"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="80"/></svg></div>
       <span class="skill-num">04 / Native Apps</span>
-      <div class="skill-name">Android & iOS</div>
-      <div style="font-size:11px;color:var(--ash2)">App store distribution, native SDK integrations, build configurations, Gradle/Xcode builds.</div>
+      <h3 class="skill-name">Android &amp; iOS</h3>
+      <p class="skill-desc">App store distribution, native SDK integrations, build configurations, Gradle/Xcode builds.</p>
       <div class="skill-tags"><span class="stag">Android</span><span class="stag">iOS</span><span class="stag">Xcode</span><span class="stag">Gradle</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="85"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="85"/></svg></div>
       <span class="skill-num">05 / Product Design</span>
-      <div class="skill-name">UI/UX Design</div>
-      <div style="font-size:11px;color:var(--ash2)">High-fidelity prototyping in Figma, wireframing, typography, color systems, user flows.</div>
+      <h3 class="skill-name">UI/UX Design</h3>
+      <p class="skill-desc">High-fidelity prototyping in Figma, wireframing, typography, color systems, user flows.</p>
       <div class="skill-tags"><span class="stag">UI/UX</span><span class="stag">Figma</span><span class="stag">Wireframes</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="88"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="88"/></svg></div>
       <span class="skill-num">06 / Databases</span>
-      <div class="skill-name">MySQL & PostgreSQL</div>
-      <div style="font-size:11px;color:var(--ash2)">Schema design, migrations, indexing, optimization, stored procedures, PostgreSQL, Oracle DB.</div>
+      <h3 class="skill-name">MySQL &amp; PostgreSQL</h3>
+      <p class="skill-desc">Schema design, migrations, indexing, query optimisation, stored procedures, Oracle DB.</p>
       <div class="skill-tags"><span class="stag">MySQL</span><span class="stag">PostgreSQL</span><span class="stag">Oracle</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="88"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="88"/></svg></div>
       <span class="skill-num">07 / API Integration</span>
-      <div class="skill-name">REST APIs & Integration</div>
-      <div style="font-size:11px;color:var(--ash2)">Resource routing, token auth, third-party API integration, JSON formatting, webhooks.</div>
+      <h3 class="skill-name">REST APIs &amp; Integration</h3>
+      <p class="skill-desc">Resource routing, token auth, third-party API integration, JSON formatting, webhooks.</p>
       <div class="skill-tags"><span class="stag">REST</span><span class="stag">JSON</span><span class="stag">Webhooks</span></div>
     </div>
 
     <div class="skill-item">
-      <div class="arc-wrap"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="80"/></svg></div>
+      <div class="arc-wrap" aria-hidden="true"><svg class="arc" viewBox="0 0 46 46"><circle class="arc-bg" cx="23" cy="23" r="20"/><circle class="arc-fg" cx="23" cy="23" r="20" data-pct="80"/></svg></div>
       <span class="skill-num">08 / DevOps</span>
-      <div class="skill-name">Server & Deployment</div>
-      <div style="font-size:11px;color:var(--ash2)">cPanel, VPS, Apache, Nginx server setups, domain configurations, SSL, Git deployments.</div>
-      <div class="skill-tags"><span class="stag">cPanel</span><span class="stag">Nginx</span><span class="stag">VPS</span><span class="stag">Git</span></div>
+      <h3 class="skill-name">Server &amp; Deployment</h3>
+      <p class="skill-desc">Vercel, cPanel, VPS, Apache &amp; Nginx setups, domain configuration, SSL, Git deployments.</p>
+      <div class="skill-tags"><span class="stag">Vercel</span><span class="stag">cPanel</span><span class="stag">Nginx</span><span class="stag">Git</span></div>
     </div>
 
   </div>
 </section>
 
-<!-- LIVE PROJECTS -->
+<!-- LIVE PROJECTS
+     Every card is the single source of truth: the live-project counters and the
+     terminal's `ls live-projects/` list are generated from cards with data-status="live".
+     Screenshots live in assets/projects/ (960×600 WebP). -->
 <section id="projects" class="sec">
   <div class="proj-intro">
     <div>
       <div class="sec-label reveal">Live Work</div>
-      <h2 class="sec-title reveal delay-1" style="margin-bottom:0">SHIPPED &amp;<br><em>LIVE</em></h2>
+      <h2 class="sec-title reveal delay-1">SHIPPED &amp;<br><em>LIVE</em></h2>
     </div>
-    <p class="proj-desc reveal-right delay-2">These aren't mockups — every project below is live, deployed, and serving real users right now. Built end-to-end by Sahil Bhargava.</p>
+    <p class="proj-desc reveal-right delay-2">Not mockups — every project here is a live production site serving real customers, built end-to-end by me.</p>
   </div>
 
-  <div class="proj-track-wrap reveal">
-    <div class="proj-track" id="projTrack">
+  <!-- FEATURED -->
+  <div class="proj-featured">
 
-      <!-- PROJECT 1: MND Designs -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://mnddesigns.in/" loading="lazy" title="MND Designs" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Design Agency</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Design Agency Website</div>
-          <div class="proj-name">MND Designs</div>
-          <div class="proj-info">A creative design agency website — showcasing services, portfolio, and brand identity with a polished, professional interface.</div>
-          <div class="proj-tech"><span class="ptag">PHP</span><span class="ptag">Laravel</span><span class="ptag">MySQL</span><span class="ptag">HTML/CSS</span><span class="ptag">JS</span></div>
-          <a href="https://mnddesigns.in/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
+    <article class="proj-card proj-card--featured reveal delay-1" data-status="live" data-domain="dpolohotels.com">
+      <a class="proj-preview" href="https://www.dpolohotels.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/dpolohotels.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+        <span class="proj-badge">Featured</span>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Hospitality · Hotel Group</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">D'Polo Hotels</h3>
+        <p class="proj-info">Website for a group of three boutique hotels in Dharamshala — room and suite listings, an availability search by date, hotel and guests, and dedicated pages for weddings, meetings &amp; events and the spa.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Laravel</li><li>PHP</li><li>Bootstrap</li><li>JavaScript</li></ul>
+        <a class="proj-link" href="https://www.dpolohotels.com/" target="_blank" rel="noopener noreferrer">dpolohotels.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
       </div>
+    </article>
 
-      <!-- PROJECT 2: Mirai Global Polymers -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://miraiglobalpolymers.com/" loading="lazy" title="Mirai Global Polymers" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Industrial</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Industrial / B2B Website</div>
-          <div class="proj-name">Mirai Global Polymers</div>
-          <div class="proj-info">A professional industrial polymer company website with product catalogue, company overview, and client-facing business portal.</div>
-          <div class="proj-tech"><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">HTML/CSS</span><span class="ptag">JavaScript</span></div>
-          <a href="https://miraiglobalpolymers.com/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
+    <article class="proj-card proj-card--featured reveal delay-2" data-status="live" data-domain="vikingtradelinks.in">
+      <a class="proj-preview" href="https://www.vikingtradelinks.in/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/vikingtradelinks.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+        <span class="proj-badge">Featured</span>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Automotive · B2B Catalogue</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Viking Tradelinks</h3>
+        <p class="proj-info">Spare-parts platform for a Viking Group company (est. 1969) supplying MAN, Mercedes-Benz, Scania and Volvo truck, bus and marine parts — a 15,000+ part catalogue, brand hubs and a request-for-quote cart.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>Vercel</li></ul>
+        <a class="proj-link" href="https://www.vikingtradelinks.in/" target="_blank" rel="noopener noreferrer">vikingtradelinks.in<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
       </div>
+    </article>
 
-      <!-- PROJECT 3: The Au Grand Air -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://www.theaugrandair.in/" loading="lazy" title="The Au Grand Air" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Hospitality</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Hospitality / Luxury</div>
-          <div class="proj-name">The Au Grand Air</div>
-          <div class="proj-info">A luxury hospitality website with elegant design, room showcases, booking integration, and immersive visual storytelling.</div>
-          <div class="proj-tech"><span class="ptag">PHP</span><span class="ptag">Laravel</span><span class="ptag">MySQL</span><span class="ptag">HTML/CSS</span><span class="ptag">JS</span></div>
-          <a href="https://www.theaugrandair.in/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 4: Klothix -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://klothix.com/" loading="lazy" title="Klothix" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Fashion</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Fashion / E-commerce Website</div>
-          <div class="proj-name">Klothix</div>
-          <div class="proj-info">A modern fashion website focused on product presentation, smooth browsing, and responsive user experience for online customers.</div>
-          <div class="proj-tech"><span class="ptag">Laravel</span><span class="ptag">PHP</span><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">MySQL</span></div>
-          <a href="https://klothix.com/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 5: TravelSamurais -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://www.travelsamurais.com/" loading="lazy" title="TravelSamurais" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Travel & Tourism</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Travel Agency Platform</div>
-          <div class="proj-name">TravelSamurais</div>
-          <div class="proj-info">A full-featured travel agency website with destination browsing, curated packages, inquiry forms, blog, and testimonials — built for lead generation.</div>
-          <div class="proj-tech"><span class="ptag">Laravel</span><span class="ptag">PHP</span><span class="ptag">MySQL</span><span class="ptag">HTML/CSS</span><span class="ptag">JS</span></div>
-          <a href="https://www.travelsamurais.com/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 6: The Career Gadget -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://thecareergadget.com/" loading="lazy" title="The Career Gadget" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Career Services</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Career Coaching / SaaS</div>
-          <div class="proj-name">The Career Gadget</div>
-          <div class="proj-info">A UK-based reverse recruitment service website with booking system, testimonials carousel, comparison tables, and Google Calendar integration.</div>
-          <div class="proj-tech"><span class="ptag">HTML/CSS</span><span class="ptag">JavaScript</span><span class="ptag">Google Apps Script</span></div>
-          <a href="https://thecareergadget.com/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 7: Healing Ourth -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://www.healingourth.com/" loading="lazy" title="Healing Ourth" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Eco / Product</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Eco-Friendly Product Website</div>
-          <div class="proj-name">Healing Ourth</div>
-          <div class="proj-info">A modern eco-friendly tableware brand website built with Next.js — featuring product catalog, glassmorphism UI, and responsive design with Tailwind CSS.</div>
-          <div class="proj-tech"><span class="ptag">Next.js</span><span class="ptag">React</span><span class="ptag">Tailwind</span><span class="ptag">TypeScript</span></div>
-          <a href="https://www.healingourth.com/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 8: Holistica -->
-      <div class="proj-card">
-        <div class="proj-preview">
-          <iframe src="https://www.holistica.org.in/" loading="lazy" title="Holistica" scrolling="no"></iframe>
-          <div class="proj-preview-overlay"></div>
-          <span class="proj-preview-label">Health &amp; Wellness</span>
-          <span class="proj-preview-live"><span class="live-dot"></span>Live</span>
-        </div>
-        <div class="proj-body">
-          <div class="proj-type">Healthcare / Wellness Platform</div>
-          <div class="proj-name">Holistica</div>
-          <div class="proj-info">An affordable mental healthcare and holistic wellness platform featuring personalized therapist matching, evidence-based therapy resources, and progressive user tracking.</div>
-          <div class="proj-tech"><span class="ptag">Next.js</span><span class="ptag">React</span><span class="ptag">Tailwind</span><span class="ptag">TypeScript</span></div>
-          <a href="https://www.holistica.org.in/" target="_blank" class="proj-link">Visit Live Site ↗</a>
-        </div>
-      </div>
-
-    </div>
   </div>
 
-  <div class="proj-controls reveal delay-2">
-    <button class="proj-btn" id="prevBtn">&#8592;</button>
-    <span class="proj-counter" id="projCounter">01 / 08</span>
-    <button class="proj-btn" id="nextBtn">&#8594;</button>
+  <h3 class="proj-subhead reveal">More live projects</h3>
+
+  <div class="proj-grid">
+
+    <article class="proj-card reveal delay-1" data-status="live" data-domain="consider-itdone.com">
+      <a class="proj-preview" href="https://www.consider-itdone.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/consider-itdone.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Business Services · US</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Consider It Done</h3>
+        <p class="proj-info">Service platform for a US company covering tax resolution, bookkeeping, home solar and procurement — an interactive illustrated hero, customer accounts, step-by-step consultation booking and GDPR/CCPA consent.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>Tailwind</li></ul>
+        <a class="proj-link" href="https://www.consider-itdone.com/" target="_blank" rel="noopener noreferrer">consider-itdone.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-2" data-status="live" data-domain="lalisbuildmart.com">
+      <a class="proj-preview" href="https://lalisbuildmart.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/lalisbuildmart.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Construction · Wholesale</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Lali's BuildMart</h3>
+        <p class="proj-info">Website for a Dharamshala building-materials supplier trading since 1924 — an interactive house model with hotspots for every product category, plus catalogue, projects and quote requests.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>Tailwind</li></ul>
+        <a class="proj-link" href="https://lalisbuildmart.com/" target="_blank" rel="noopener noreferrer">lalisbuildmart.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-3" data-status="live" data-domain="healingourth.com">
+      <a class="proj-preview" href="https://www.healingourth.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/healingourth.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Eco Products · Marketplace</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Healing OURTH</h3>
+        <p class="proj-info">Marketplace for a plastic-free tableware brand making compostable bowls and plates — product catalogue, cart and wishlist, customer sign-in and seasonal campaign pages.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>Tailwind</li><li>TypeScript</li></ul>
+        <a class="proj-link" href="https://www.healingourth.com/" target="_blank" rel="noopener noreferrer">healingourth.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-4" data-status="live" data-domain="aartcafe.com">
+      <a class="proj-preview" href="https://www.aartcafe.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/aartcafe.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">E-commerce · Handmade Gifts</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Aart Cafe</h3>
+        <p class="proj-info">Online store for a Delhi studio crafting preserved-flower frames, resin décor and wedding keepsakes — shop, wishlist and bag, festive and wedding collections, and customer reviews.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>Vercel</li></ul>
+        <a class="proj-link" href="https://www.aartcafe.com/" target="_blank" rel="noopener noreferrer">aartcafe.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-1" data-status="live" data-domain="travelsamurais.com">
+      <a class="proj-preview" href="https://www.travelsamurais.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/travelsamurais.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Travel · Agency Platform</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">TravelSamurais</h3>
+        <p class="proj-info">Travel agency website with destination search, curated packages, tailored experiences, a blog and enquiry forms — built to turn visitors into leads.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Laravel</li><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
+        <a class="proj-link" href="https://www.travelsamurais.com/" target="_blank" rel="noopener noreferrer">travelsamurais.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-2" data-status="live" data-domain="thecareergadget.com">
+      <a class="proj-preview" href="https://www.thecareergadget.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/thecareergadget.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Career Services · UK</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">The Career Gadget</h3>
+        <p class="proj-info">Website for a UK reverse-recruitment service — free-consultation booking with Google Calendar integration, visa-strategy content, comparison tables and a testimonial carousel.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>HTML/CSS</li><li>JavaScript</li><li>Google Apps Script</li></ul>
+        <a class="proj-link" href="https://www.thecareergadget.com/" target="_blank" rel="noopener noreferrer">thecareergadget.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-3" data-status="live" data-domain="miraiglobalpolymers.com">
+      <a class="proj-preview" href="https://miraiglobalpolymers.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/miraiglobalpolymers.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Manufacturing · B2B</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Mirai Global Polymers</h3>
+        <p class="proj-info">Corporate website for an engineering-polymer compounder — product grades, catalogue and company-profile downloads, industry pages, and quote and sample requests.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>PHP</li><li>MySQL</li><li>HTML/CSS</li><li>JavaScript</li></ul>
+        <a class="proj-link" href="https://miraiglobalpolymers.com/" target="_blank" rel="noopener noreferrer">miraiglobalpolymers.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card reveal delay-4" data-status="live" data-domain="theaugrandair.in">
+      <a class="proj-preview" href="https://www.theaugrandair.in/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="assets/projects/theaugrandair.webp" alt="" width="960" height="600" loading="lazy" decoding="async"/>
+      </a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Education · Preschool</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Au Grand Air</h3>
+        <p class="proj-info">Website for a French pre-school and day care in Delhi NCR, presenting its Crèche (6 months – 2 years) and Maternelle (2 – 6 years) programmes.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>PHP</li><li>Laravel</li><li>MySQL</li><li>JavaScript</li></ul>
+        <a class="proj-link" href="https://www.theaugrandair.in/" target="_blank" rel="noopener noreferrer">theaugrandair.in<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <!-- HIDDEN — these sites were unreachable when checked on 2026-11-20, so they are kept out of view
+         to avoid sending visitors to an error page. Once a site is back up, remove `hidden`,
+         set data-status="live", and swap the placeholder for a screenshot in assets/projects/.
+         - mnddesigns.in: browsers show "Your connection is not private" (SSL certificate not trusted).
+         - holistica.org.in, klothix.com: domain does not resolve (no DNS record). -->
+
+    <article class="proj-card" data-status="offline" data-domain="mnddesigns.in" hidden>
+      <a class="proj-preview proj-preview--placeholder" href="https://mnddesigns.in/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><span>MND Designs</span></a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Design Agency</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">MND Designs</h3>
+        <p class="proj-info">A creative design agency website — showcasing services, portfolio, and brand identity with a polished, professional interface.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>PHP</li><li>Laravel</li><li>MySQL</li><li>JavaScript</li></ul>
+        <a class="proj-link" href="https://mnddesigns.in/" target="_blank" rel="noopener noreferrer">mnddesigns.in<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-status="offline" data-domain="holistica.org.in" hidden>
+      <a class="proj-preview proj-preview--placeholder" href="https://www.holistica.org.in/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><span>Holistica</span></a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Healthcare · Wellness</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Holistica</h3>
+        <p class="proj-info">An affordable mental healthcare and holistic wellness platform featuring personalized therapist matching, evidence-based therapy resources, and progressive user tracking.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Next.js</li><li>React</li><li>Tailwind</li><li>TypeScript</li></ul>
+        <a class="proj-link" href="https://www.holistica.org.in/" target="_blank" rel="noopener noreferrer">holistica.org.in<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-status="offline" data-domain="klothix.com" hidden>
+      <a class="proj-preview proj-preview--placeholder" href="https://klothix.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><span>Klothix</span></a>
+      <div class="proj-body">
+        <div class="proj-meta"><span class="proj-type">Fashion · E-commerce</span><span class="proj-live"><span class="live-dot"></span>Live</span></div>
+        <h3 class="proj-name">Klothix</h3>
+        <p class="proj-info">A modern fashion website focused on product presentation, smooth browsing, and responsive user experience for online customers.</p>
+        <ul class="proj-tech" aria-label="Tech stack"><li>Laravel</li><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
+        <a class="proj-link" href="https://klothix.com/" target="_blank" rel="noopener noreferrer">klothix.com<span class="sr-only"> (opens in a new tab)</span><span class="proj-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -368,13 +432,43 @@
 <section id="process" class="sec">
   <div class="sec-label reveal">How I Work</div>
   <h2 class="sec-title reveal delay-1">MY<br><em>PROCESS</em></h2>
-  <div class="process-grid reveal delay-2">
-    <div class="proc-card"><div class="proc-num">01</div><span class="proc-icon">🎯</span><div class="proc-title">Discovery</div><div class="proc-desc">Understand your goals, audience, and technical requirements before writing a single line.</div><div class="proc-bar"></div></div>
-    <div class="proc-card"><div class="proc-num">02</div><span class="proc-icon">🏗️</span><div class="proc-title">Architecture</div><div class="proc-desc">DB schema design, Laravel structure, routing plan and third-party integrations mapped out.</div><div class="proc-bar"></div></div>
-    <div class="proc-card"><div class="proc-num">03</div><span class="proc-icon">⚡</span><div class="proc-title">Build</div><div class="proc-desc">Clean, well-structured PHP/Laravel code. Regular demos. Your feedback shapes every sprint.</div><div class="proc-bar"></div></div>
-    <div class="proc-card"><div class="proc-num">04</div><span class="proc-icon">🧪</span><div class="proc-title">Test & Polish</div><div class="proc-desc">Cross-browser testing, performance checks, security review. Nothing ships broken.</div><div class="proc-bar"></div></div>
-    <div class="proc-card"><div class="proc-num">05</div><span class="proc-icon">🚀</span><div class="proc-title">Deploy & Support</div><div class="proc-desc">Server setup, domain config, SSL, go-live. Ongoing support and updates included.</div><div class="proc-bar"></div></div>
-  </div>
+  <ol class="process-grid reveal delay-2">
+    <li class="proc-card">
+      <div class="proc-num" aria-hidden="true">01</div>
+      <span class="proc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/></svg></span>
+      <h3 class="proc-title">Discovery</h3>
+      <p class="proc-desc">Understand your goals, audience and technical requirements before writing a single line.</p>
+      <div class="proc-bar"></div>
+    </li>
+    <li class="proc-card">
+      <div class="proc-num" aria-hidden="true">02</div>
+      <span class="proc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span>
+      <h3 class="proc-title">Design &amp; Architecture</h3>
+      <p class="proc-desc">Figma UI, database schema, routing plan and third-party integrations mapped out up front.</p>
+      <div class="proc-bar"></div>
+    </li>
+    <li class="proc-card">
+      <div class="proc-num" aria-hidden="true">03</div>
+      <span class="proc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg></span>
+      <h3 class="proc-title">Build</h3>
+      <p class="proc-desc">Clean, well-structured Next.js, Laravel or React Native code. Regular demos — your feedback shapes every sprint.</p>
+      <div class="proc-bar"></div>
+    </li>
+    <li class="proc-card">
+      <div class="proc-num" aria-hidden="true">04</div>
+      <span class="proc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      <h3 class="proc-title">Test &amp; Polish</h3>
+      <p class="proc-desc">Cross-browser and device testing, performance checks, security review. Nothing ships broken.</p>
+      <div class="proc-bar"></div>
+    </li>
+    <li class="proc-card">
+      <div class="proc-num" aria-hidden="true">05</div>
+      <span class="proc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15V4"/><path d="m7 9 5-5 5 5"/><path d="M5 20h14"/></svg></span>
+      <h3 class="proc-title">Deploy &amp; Support</h3>
+      <p class="proc-desc">Server setup, domain config, SSL and go-live. Ongoing support and updates included.</p>
+      <div class="proc-bar"></div>
+    </li>
+  </ol>
 </section>
 
 <!-- TESTIMONIALS -->
@@ -382,66 +476,74 @@
   <div class="sec-label reveal">Social Proof</div>
   <h2 class="sec-title reveal delay-1">CLIENT<br><em>WORDS</em></h2>
   <div class="testi-grid">
-    <div class="testi-card reveal delay-1">
-      <div class="quote-mark">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"Sahil built our entire company website from scratch. Clean design, fast load times, and everything we asked for — delivered on time without any back-and-forth."</p>
-      <div class="testi-name">Client — MND Designs</div>
-      <div class="testi-role">Design Agency, India</div>
-    </div>
-    <div class="testi-card reveal delay-2">
-      <div class="quote-mark">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"Our polymer business needed a professional online presence. Sahil understood our industry quickly and delivered a website that represents us perfectly."</p>
-      <div class="testi-name">Client — Mirai Global Polymers</div>
-      <div class="testi-role">Industrial B2B, India</div>
-    </div>
-    <div class="testi-card reveal delay-3">
-      <div class="quote-mark">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"The Au Grand Air website beautifully captures the essence of our property. Elegant, fast, and exactly what a luxury hospitality brand needs online."</p>
-      <div class="testi-name">Client — The Au Grand Air</div>
-      <div class="testi-role">Hospitality & Luxury, India</div>
-    </div>
-    <div class="testi-card reveal delay-4">
-      <div class="quote-mark">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"I’ve had the pleasure of working closely with Sahil on our website development, and I must say the experience has been exceptional. From understanding our vision to bringing it to life with creativity and precision, Sahil demonstrated true professionalism and expertise throughout the process.<br><br>The website not only looks visually stunning but is also highly functional, user-friendly, and aligned perfectly with our brand identity. His attention to detail, responsiveness, and ability to deliver beyond expectations truly set him apart.<br><br>I highly recommend to anyone looking for a talented and reliable website designer who can turn ideas into impactful digital experiences."</p>
-      <div class="testi-name">Muskaan Malhotra</div>
-      <div class="testi-role">Co-Founder & CEO, The Career Gadget</div>
-    </div>
-    <div class="testi-card reveal delay-5">
-      <div class="quote-mark">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">"Working with Sahil was a great experience! He delivered a clean, professional website and was very receptive to our feedback. Every change we requested was implemented promptly and accurately. Highly recommend him for anyone looking for a reliable and skilled web designer!"</p>
-      <div class="testi-name">Nikhil Gupta</div>
-      <div class="testi-role">Founder, Founder Leadership</div>
-    </div>
+    <figure class="testi-card testi-card--featured reveal delay-1">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <div class="testi-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</div>
+      <blockquote class="testi-text">
+        <p>I’ve had the pleasure of working closely with Sahil on our website development, and I must say the experience has been exceptional. From understanding our vision to bringing it to life with creativity and precision, Sahil demonstrated true professionalism and expertise throughout the process.</p>
+        <p>The website not only looks visually stunning but is also highly functional, user-friendly, and aligned perfectly with our brand identity. His attention to detail, responsiveness, and ability to deliver beyond expectations truly set him apart.</p>
+        <p>I highly recommend to anyone looking for a talented and reliable website designer who can turn ideas into impactful digital experiences.</p>
+      </blockquote>
+      <figcaption>
+        <span class="testi-name">Muskaan Malhotra</span>
+        <span class="testi-role">Co-Founder &amp; CEO, The Career Gadget</span>
+      </figcaption>
+    </figure>
+    <figure class="testi-card reveal delay-2">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <div class="testi-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</div>
+      <blockquote class="testi-text"><p>Working with Sahil was a great experience! He delivered a clean, professional website and was very receptive to our feedback. Every change we requested was implemented promptly and accurately. Highly recommend him for anyone looking for a reliable and skilled web designer!</p></blockquote>
+      <figcaption>
+        <span class="testi-name">Nikhil Gupta</span>
+        <span class="testi-role">Founder, Founder Leadership</span>
+      </figcaption>
+    </figure>
+    <figure class="testi-card reveal delay-3">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <div class="testi-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</div>
+      <blockquote class="testi-text"><p>Our polymer business needed a professional online presence. Sahil understood our industry quickly and delivered a website that represents us perfectly.</p></blockquote>
+      <figcaption>
+        <span class="testi-name">Client — Mirai Global Polymers</span>
+        <span class="testi-role">Industrial B2B, India</span>
+      </figcaption>
+    </figure>
+    <figure class="testi-card reveal delay-4">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <div class="testi-stars" role="img" aria-label="Rated 5 out of 5">★★★★★</div>
+      <blockquote class="testi-text"><p>Sahil built our entire company website from scratch. Clean design, fast load times, and everything we asked for — delivered on time without any back-and-forth.</p></blockquote>
+      <figcaption>
+        <span class="testi-name">Client — MND Designs</span>
+        <span class="testi-role">Design Agency, India</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="contact-glow"></div>
-  <div class="sec-label reveal" style="justify-content:center">Get In Touch</div>
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="sec-label sec-label--center reveal">Get In Touch</div>
   <h2 class="contact-big reveal delay-1">LET'S<br><em>BUILD</em></h2>
   <p class="contact-sub reveal delay-2">Have a project in mind? I'd love to hear about it.</p>
   <a href="mailto:sahilbhargava6@gmail.com" class="contact-email reveal delay-3">sahilbhargava6@gmail.com</a>
   <div class="reveal delay-4">
-    <a href="mailto:sahilbhargava6@gmail.com" class="magnetic-btn" id="magBtn"><span>Start a Project →</span></a>
+    <a href="mailto:sahilbhargava6@gmail.com?subject=Project%20enquiry" class="magnetic-btn" id="magBtn"><span>Start a Project →</span></a>
   </div>
   <ul class="socials reveal delay-5">
-    <li><a href="https://github.com/sahilbhargava6">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/sahilbhargava6/">LinkedIn</a></li>
-    <li><a href="https://wa.me/918800822197">WhatsApp</a></li>
+    <li><a href="https://github.com/sahilbhargava6" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/sahilbhargava6/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+    <li><a href="https://wa.me/918800822197" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
   </ul>
 </section>
 
+</main>
+
 <footer>
-  <span>© 2026 Sahil Bhargava. All Rights Reserved.</span>
+  <span>© <span id="year">2026</span> Sahil Bhargava. All rights reserved.</span>
   <span>Full Stack &amp; Mobile Developer — Next.js, Laravel, React Native</span>
+  <a href="#hero" class="to-top">Back to top ↑</a>
 </footer>
 
-<script src="js/script.js?v=1.1"></script>
+<script src="js/script.js?v=2.0"></script>
 </body>
 </html>
