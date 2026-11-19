@@ -152,7 +152,7 @@
   (() => {
     const el = $('#typed-text');
     if (!el || reduceMotion) return;
-    const roles = ['Next.js web apps.', 'React Native mobile apps.', 'Laravel & PHP backends.', 'creative UI/UX designs.', 'Android & iOS applications.', 'production-ready code.'];
+    const roles = ['React Native mobile apps.', 'AI-powered products.', 'Next.js web apps.', 'Laravel & FastAPI backends.', 'TypeScript, end to end.', 'production-ready code.'];
     let ri = 0, ci = 0, deleting = false;
     el.textContent = '';
     const tick = () => {
@@ -173,7 +173,7 @@
   (() => {
     const tag = $('#heroTechRotator');
     if (!tag) return;
-    const tech = ['Next.js', 'Laravel', 'React Native', 'iOS & Android', 'UI/UX Design', 'PHP', 'PostgreSQL', 'REST APIs'];
+    const tech = ['Next.js', 'React Native', 'TypeScript', 'Laravel', 'FastAPI', 'Expo', 'AWS', 'PostgreSQL'];
     let i = 0;
     setInterval(() => {
       tag.classList.add('switching');
@@ -195,14 +195,15 @@
     const lines = [
       '<span class="c-comment"># Sahil Bhargava — Full Stack &amp; Mobile Engineer</span>',
       '<span class="c-green">$</span> <span class="c-white">npx stack-info</span>',
-      '<span class="c-yellow">→</span> Web, Mobile &amp; UI/UX Developer',
+      '<span class="c-yellow">→</span> Full-stack · Web &amp; Mobile · AI products',
       '<span class="c-green">$</span> <span class="c-white">cat skills.json</span>',
       '<span class="c-blue">{</span>',
-      '&nbsp;&nbsp;<span class="c-yellow">"frontend"</span>: <span class="c-green">"Next.js, React, Tailwind"</span>,',
-      '&nbsp;&nbsp;<span class="c-yellow">"mobile"</span>: <span class="c-green">"React Native, Android, iOS"</span>,',
-      '&nbsp;&nbsp;<span class="c-yellow">"backend"</span>: <span class="c-green">"Laravel, PHP, Node.js"</span>,',
-      '&nbsp;&nbsp;<span class="c-yellow">"design"</span>: <span class="c-green">"UI/UX Design, Figma"</span>,',
-      '&nbsp;&nbsp;<span class="c-yellow">"databases"</span>: <span class="c-green">"MySQL, PostgreSQL, Oracle"</span>',
+      '&nbsp;&nbsp;<span class="c-yellow">"languages"</span>: <span class="c-green">"TypeScript, JavaScript, PHP, Python, SQL"</span>,',
+      '&nbsp;&nbsp;<span class="c-yellow">"mobile"</span>: <span class="c-green">"React Native, Expo (EAS, OTA)"</span>,',
+      '&nbsp;&nbsp;<span class="c-yellow">"frontend"</span>: <span class="c-green">"React, Next.js, TanStack Query, Zustand"</span>,',
+      '&nbsp;&nbsp;<span class="c-yellow">"backend"</span>: <span class="c-green">"Laravel, Node.js, FastAPI, LLM APIs"</span>,',
+      '&nbsp;&nbsp;<span class="c-yellow">"databases"</span>: <span class="c-green">"PostgreSQL, MySQL, Oracle 19c"</span>,',
+      '&nbsp;&nbsp;<span class="c-yellow">"cloud"</span>: <span class="c-green">"AWS, Docker, GitHub Actions, Nginx"</span>',
       '<span class="c-blue">}</span>',
       '<span class="c-green">$</span> <span class="c-white">ls live-projects/</span>',
       ...rows.map(r => r.map(d => `<span class="c-orange">${esc(d)}</span>`).join(' &nbsp;')),
@@ -271,13 +272,15 @@
      A skill's data-match lists tech tags; any live card with a matching tag counts. */
   (() => {
     const tagsOf = card => $$('.proj-tech li', card).map(li => li.textContent.trim().toLowerCase());
+    // client sites plus team products (e.g. Neboss) both count as shipped work here
+    const shipped = $$('.proj-card:not([hidden])').filter(c => ['live', 'team'].includes(c.dataset.status));
     $$('.skill-item[data-match]').forEach(item => {
       const wanted = item.dataset.match.split(',').map(s => s.trim().toLowerCase());
-      const hits = liveCards.filter(card => tagsOf(card).some(t => wanted.includes(t)));
+      const hits = shipped.filter(card => tagsOf(card).some(t => wanted.includes(t)));
       if (!hits.length) return;
       const badge = document.createElement('span');
       badge.className = 'skill-proof';
-      badge.textContent = `${hits.length} live site${hits.length > 1 ? 's' : ''}`;
+      badge.textContent = `${hits.length} live project${hits.length > 1 ? 's' : ''}`;
       item.prepend(badge);
       const list = document.createElement('p');
       list.className = 'skill-shipped';
