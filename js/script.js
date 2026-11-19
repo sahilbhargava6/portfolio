@@ -267,16 +267,23 @@
     els.forEach(el => obs.observe(el));
   })();
 
-  /* SKILL ARCS */
+  /* SKILL PROOF — instead of self-rated percentages, show which live sites use each skill.
+     A skill's data-match lists tech tags; any live card with a matching tag counts. */
   (() => {
-    const C = 2 * Math.PI * 20;
-    const fill = item => item.querySelectorAll('.arc-fg').forEach(a => { a.style.strokeDashoffset = C - (C * +a.dataset.pct) / 100; });
-    const items = $$('.skill-item');
-    if (reduceMotion || !hasIO) { items.forEach(fill); return; }
-    const obs = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { fill(e.target); obs.unobserve(e.target); }
-    }), { threshold: 0.3 });
-    items.forEach(i => obs.observe(i));
+    const tagsOf = card => $$('.proj-tech li', card).map(li => li.textContent.trim().toLowerCase());
+    $$('.skill-item[data-match]').forEach(item => {
+      const wanted = item.dataset.match.split(',').map(s => s.trim().toLowerCase());
+      const hits = liveCards.filter(card => tagsOf(card).some(t => wanted.includes(t)));
+      if (!hits.length) return;
+      const badge = document.createElement('span');
+      badge.className = 'skill-proof';
+      badge.textContent = `${hits.length} live site${hits.length > 1 ? 's' : ''}`;
+      item.prepend(badge);
+      const list = document.createElement('p');
+      list.className = 'skill-shipped';
+      list.innerHTML = '<b>Shipped in</b>' + hits.map(c => esc($('.proj-name', c).textContent)).join(', ');
+      item.appendChild(list);
+    });
   })();
 
   /* MAGNETIC BUTTON */
